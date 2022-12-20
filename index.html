@@ -1,0 +1,37 @@
+<html>
+  <head>
+    <title> titolo </title>
+    <script src="js/aframe.js"></script>
+  </head>
+  <body>
+    <h1>PRIMO SITO</h1>
+    <a-scene embedded>
+      <a-assets>
+        <a-asset-item id="cityModel" src="https://cdn.aframe.io/test-models/models/glTF-2.0/virtualcity/VC.gltf"></a-asset-item>
+        <a-asset-item id="albero" src="models/albero.fbx"></a-asset-item>-->
+
+        </a-assets>
+         <!--<a-asset-item id="scene" src="scene.gltf"></a-asset-item>-->
+
+    <!--<img id="sky" src="sky.jpg">-->
+
+      <a-box position="-1 1.5 -3" rotation="0 45 0" color="#4CC3D9" material = "normalMap :normal.jpg"></a-box>
+      <a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E" material = "normalMap :normal.jpg" ></a-sphere>
+      <a-cylinder position="1 0.75 -3" radius="0.5" height="1.5" color="#FFC65D" material = "normalMap :normal.jpg"></a-cylinder>
+      <!--<a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>-->
+      <!--<a-sky color="#6EBAA7"></a-sky> <a-sky src="#sky"></a-sky>-->
+     <a-entity gltf-model="#cityModel" modify-materials></a-entity>
+     <!--<a-entity gltf-model="#scene"></a-entity>-->
+     <a-entity light="type: directional; color: #AFA; intensity: 5.5" position="-1 1 0"></a-entity>
+     <a-gltf-model position="1.5 0.7 -2" src="#albero"></a-gltf-model>
+
+
+      <a-entity position="0 0 -4"rotation="0 0 0" animation="easing:linear; property: rotation; to: 0 360 0; loop: true; dur: 10000">
+        <a-sphere position="5 0 0" color="mediumseagreen"></a-sphere>
+
+
+</a-entity>
+
+    </a-scene>
+  </body>
+</html>
